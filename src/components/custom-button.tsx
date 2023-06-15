@@ -43,7 +43,7 @@ export class CustomButton {
     return (
       <button
         class="gx-custom-button"
-        role="button"
+        type="button"
         aria-disabled={this.disabled}
         disabled={this.disabled}
         onClick={this.handleClick}
