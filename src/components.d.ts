@@ -7,14 +7,54 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface CustomButton {
+        /**
+          * This attribute specifies the background color of the button on its defualt state
+          * @default #778da9
+         */
         "background": string;
+        /**
+          * This attribute specifies the border color of the button
+          * @default #5e7797
+         */
         "borderColor": string;
+        /**
+          * This attribute specifies the border size of the button
+          * @default 3px
+         */
         "borderSize": string;
+        /**
+          * This attribute specifies if the button is disabled or not
+         */
         "disabled": boolean;
+        /**
+          * This attribute specifies the font size of the label inside the button
+          * @default 16px
+         */
         "fontSize": string;
+        /**
+          * This attribute specifies the height of the button
+          * @default 100px
+         */
+        "height": string;
+        /**
+          * This attribute specifies the border color of the button on its hovered state
+          * @default #778da9
+         */
         "hoverBorderColor": string;
+        /**
+          * This attribute specifies the background color of the button on its hovered state
+          * @default #778da9
+         */
         "hoverColor": string;
+        /**
+          * This attribute specifies the text of label inside the button
+         */
         "label": string;
+        /**
+          * This attribute specifies the width of the button
+          * @default 250px
+         */
+        "width": string;
     }
 }
 export interface CustomButtonCustomEvent<T> extends CustomEvent<T> {
@@ -34,15 +74,55 @@ declare global {
 }
 declare namespace LocalJSX {
     interface CustomButton {
+        /**
+          * This attribute specifies the background color of the button on its defualt state
+          * @default #778da9
+         */
         "background"?: string;
+        /**
+          * This attribute specifies the border color of the button
+          * @default #5e7797
+         */
         "borderColor"?: string;
+        /**
+          * This attribute specifies the border size of the button
+          * @default 3px
+         */
         "borderSize"?: string;
+        /**
+          * This attribute specifies if the button is disabled or not
+         */
         "disabled"?: boolean;
+        /**
+          * This attribute specifies the font size of the label inside the button
+          * @default 16px
+         */
         "fontSize"?: string;
+        /**
+          * This attribute specifies the height of the button
+          * @default 100px
+         */
+        "height"?: string;
+        /**
+          * This attribute specifies the border color of the button on its hovered state
+          * @default #778da9
+         */
         "hoverBorderColor"?: string;
+        /**
+          * This attribute specifies the background color of the button on its hovered state
+          * @default #778da9
+         */
         "hoverColor"?: string;
+        /**
+          * This attribute specifies the text of label inside the button
+         */
         "label"?: string;
         "onCustomButtonEvent"?: (event: CustomButtonCustomEvent<void>) => void;
+        /**
+          * This attribute specifies the width of the button
+          * @default 250px
+         */
+        "width"?: string;
     }
     interface IntrinsicElements {
         "custom-button": CustomButton;

@@ -1,6 +1,12 @@
 # custom-button
 
+A custom button component that can be used in various applications. It can recieve the props listed below and apply them.
 
+## Example
+
+```html
+<custom-button label="Submit" width="100px" height="50px"></custom-button>
+```
 
 <!-- Auto Generated Below -->
 
