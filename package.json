@@ -26,14 +26,18 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0"
+    "@stencil/core": "^3.0.0",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.22.5",
+    "@jest/globals": "^29.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
-    "jest": "^27.5.1",
-    "jest-cli": "^27.5.1",
-    "puppeteer": "^19.5.2"
+    "jest": "^27.0.3",
+    "jest-cli": "^27.4.5",
+    "puppeteer": "^20.7.1",
+    "ts-jest": "^27.1.5"
   },
   "license": "MIT"
 }

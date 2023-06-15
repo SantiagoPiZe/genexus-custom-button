@@ -6,56 +6,53 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface CustomButton {
+        "background": string;
+        "borderColor": string;
+        "borderSize": string;
+        "disabled": boolean;
+        "fontSize": string;
+        "hoverBorderColor": string;
+        "hoverColor": string;
+        "label": string;
     }
 }
+export interface CustomButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLCustomButtonElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLCustomButtonElement extends Components.CustomButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLCustomButtonElement: {
+        prototype: HTMLCustomButtonElement;
+        new (): HTMLCustomButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "custom-button": HTMLCustomButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface CustomButton {
+        "background"?: string;
+        "borderColor"?: string;
+        "borderSize"?: string;
+        "disabled"?: boolean;
+        "fontSize"?: string;
+        "hoverBorderColor"?: string;
+        "hoverColor"?: string;
+        "label"?: string;
+        "onCustomButtonEvent"?: (event: CustomButtonCustomEvent<void>) => void;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "custom-button": CustomButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "custom-button": LocalJSX.CustomButton & JSXBase.HTMLAttributes<HTMLCustomButtonElement>;
         }
     }
 }
